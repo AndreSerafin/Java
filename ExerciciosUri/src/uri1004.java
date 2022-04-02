@@ -12,7 +12,7 @@ public class uri1004 {
         a = sc.nextInt();
         b = sc.nextInt();
 
-        prod = a*b;
+        prod = a * b;
 
         System.out.printf("PRODUTO = %d\n",prod);
         sc.close();
