@@ -5,17 +5,17 @@ import java.util.Scanner;
 Em uma hora (60 minutos) o carro Y consegue se distanciar 30 quilômetros do carro X, ou seja, consegue se afastar um quilômetro a cada 2 minutos.
 Leia a distância (em Km) e calcule quanto tempo leva (em minutos) para o carro Y tomar essa distância do outro carro.*/
 public class uri1016 {
-    public static void main(String[] args){
-        
-        int horas,velMed;
-        double dist,kmLitro;
-        
+    public static void main(String[] args){int distKm,tempo;
+
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-
         
+        distKm = sc.nextInt();
+       
+        tempo = distKm * 2;
+
+        System.out.printf("%d minutos\n",tempo);
 
         sc.close();
-        
     }
 }

@@ -7,16 +7,19 @@ necessários. Mostre o valor com 3 casas decimais após o ponto.*/
 public class uri1017 {
     public static void main(String[] args){
         
-        int distKm,tempo;
+        int horas,velMed;
+        double dist,kmLitro;
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
         
-        distKm = sc.nextInt();
-       
-        tempo = distKm * 2;
+        horas = sc.nextInt();
+        velMed = sc.nextInt();
+        
+        dist = horas * velMed;
+        kmLitro = dist/12;
 
-        System.out.printf("%d\n",tempo);
+        System.out.printf("%.3f\n",kmLitro);
 
         sc.close();
         
