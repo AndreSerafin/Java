@@ -6,42 +6,47 @@ public class uri1018_2 {
     public static void main(String[] args){
         
         //int[] cedulas = {100,50,20,10,5,2,1};
-        int valor,quantidade;
+        int valor,quantidade,resto,nota;
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
        
         valor = sc.nextInt();
+        resto = valor;
 
-        
-            quantidade = valor/100;
-            quantidade %= 100;
-            System.out.printf("%d nota(s) de R$ %d,00\n",quantidade,100);
+            nota=100;
+            quantidade = resto/nota;
+            resto %= 100;
+            System.out.printf("%d nota(s) de R$ %d,00\n",quantidade,nota);
             
-            quantidade = valor/50;
-            quantidade %= 50;
-            System.out.printf("%d nota(s) de R$ %d,00\n",quantidade,50);
+            nota=50;
+            quantidade = resto/nota;
+            resto %= nota;
+            System.out.printf("%d nota(s) de R$ %d,00\n",quantidade,nota);
             
-            quantidade = valor/20;
-            quantidade %= 20;
-            System.out.printf("%d nota(s) de R$ %d,00\n",quantidade,20);
+            nota=20;
+            quantidade = resto/nota;
+            resto %= nota;
+            System.out.printf("%d nota(s) de R$ %d,00\n",quantidade,nota);
             
+            nota=10;
+            quantidade = resto/nota;
+            resto %= nota;
+            System.out.printf("%d nota(s) de R$ %d,00\n",quantidade,nota);
             
-            quantidade = valor/10;
-            quantidade %= 10;
-            System.out.printf("%d nota(s) de R$ %d,00\n",quantidade,10);
+            nota=5;
+            quantidade = resto/nota;
+            resto %= nota;
+            System.out.printf("%d nota(s) de R$ %d,00\n",quantidade,nota);
             
-            quantidade = valor/5;
-            quantidade %= 5;
-            System.out.printf("%d nota(s) de R$ %d,00\n",quantidade,5);
+            nota=2;
+            quantidade = resto/nota;
+            resto %= nota;
+            System.out.printf("%d nota(s) de R$ %d,00\n",quantidade,nota);
             
-            quantidade = valor/2;
-            quantidade %= 2;
-            System.out.printf("%d nota(s) de R$ %d,00\n",quantidade,2);
-            
-            quantidade = valor/1;
-            quantidade %= 1;
-            System.out.printf("%d nota(s) de R$ %d,00\n",quantidade,1);
+            nota=1;
+            quantidade = resto/nota;
+            System.out.printf("%d nota(s) de R$ %d,00\n",quantidade,nota);
 
         sc.close();
         

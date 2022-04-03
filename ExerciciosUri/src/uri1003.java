@@ -3,6 +3,7 @@ import java.util.Scanner;
 A seguir escrever o valor desta variável..*/
 public class uri1003 {
     public static void main(String[] args){
+        
         int a,b,soma;
 
         Scanner sc = new Scanner(System.in);

@@ -6,17 +6,17 @@ public class uri1018 {
     public static void main(String[] args){
         
         int[] cedulas = {100,50,20,10,5,2,1};
-        int valor,quantidade=0,resto=0;
+        int valor,quantidade=0;
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
        
         valor = sc.nextInt();
-        resto = valor;
+        System.out.println(valor);
         for(int i = 0;i <= 6;i++){
             quantidade = valor/cedulas[i];
-            resto %= cedulas[i];
-            System.out.printf("%d nota(s) de R$ %d,00\n",resto,cedulas[i]);
+            valor %= cedulas[i];
+            System.out.printf("%d nota(s) de R$ %d,00\n",quantidade,cedulas[i]);
         }
         
 

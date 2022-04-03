@@ -6,6 +6,7 @@ esqueça de imprimir o fim de linha após o resultado, caso contrário, você re
 
 public class uri1001 {
     public static void main(String[] args){
+        
         int a,b,x;
 
         Scanner sc = new Scanner(System.in);
