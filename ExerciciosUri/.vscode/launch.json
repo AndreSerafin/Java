@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch uri1021",
+            "request": "launch",
+            "mainClass": "uri1021",
+            "projectName": "ExerciciosUri_112c988"
+        },
+        {
+            "type": "java",
+            "name": "Launch uri1020",
+            "request": "launch",
+            "mainClass": "uri1020",
+            "projectName": "ExerciciosUri_112c988"
+        },
+        {
+            "type": "java",
             "name": "Launch uri1009",
             "request": "launch",
             "mainClass": "uri1009",

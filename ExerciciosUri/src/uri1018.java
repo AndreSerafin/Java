@@ -13,6 +13,7 @@ public class uri1018 {
        
         valor = sc.nextInt();
         System.out.println(valor);
+        
         for(int i = 0;i <= 6;i++){
             quantidade = valor/cedulas[i];
             valor %= cedulas[i];
