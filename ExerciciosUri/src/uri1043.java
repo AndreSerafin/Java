@@ -1,9 +1,9 @@
 import java.util.Locale;
 import java.util.Scanner;
-/*  Leia 2 valores com uma casa decimal (n1 e n2), que devem representar as coordenadas de um ponto em um plano. A seguir, determine qual o quadrante 
-ao qual pertence o ponto, ou se está sobre um dos ein1os cartesianos ou na origem (n1 = n2 = 0.0).
-Se o ponto estiver na origem, escreva a mensagem “Origem”.
-Se o ponto estiver sobre um dos ein1os escreva “Ein1o n1” ou “Ein1o n2”, conforme for a situação.*/
+/* Leia 3 valores reais (A, B e C) e verifique se eles formam ou não um triângulo. Em caso positivo, calcule o perímetro do triângulo e apresente a mensagem:
+Perimetro = XX.X
+Em caso negativo, calcule a área do trapézio que tem A e B como base e C como altura, mostrando a mensagem
+Area = XX.X*/
 public class uri1043{
     public static void main(String[] args){
         
@@ -16,12 +16,14 @@ public class uri1043{
         cd = sc.nextDouble();
         ef = sc.nextDouble();
 
-        if(ab + ef > cd || ab + cd > ef || ef + cd > ab){
-            System.out.printf("Forma um trinagulo\n");
+        if(ab + ef > cd && ab + cd > ef && ef + cd > ab){
+            //System.out.printf("Forma um triangulo\n");
             perim = ab + cd + ef;
+            System.out.printf("Perimetro = %.1f\n",perim);
         }else{
-            System.out.printf("Nao forma um triangulo\n");
-            area
+            //System.out.printf("Nao forma um triangulo\n");
+            area = (ab + cd) * ef /2;
+            System.out.printf("Area = %.1f\n",area);
         }
 
         sc.close();
