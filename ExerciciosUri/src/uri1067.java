@@ -5,19 +5,18 @@ A seguir, mostre a quantidade de valores positivos digitados.*/
 public class uri1067{
     public static void main(String[] args){
         
-        int n;
+        int n,n1;
         
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
         
         n = sc.nextInt();
-        int[] n1 = new int[n];
 
         for(int i = 1; i <= n;i++){
 
             if(i % 2 != 0){
-                n1[i] = i;
-                System.out.printf("%d\n",n1[i]);
+                n1 = i;
+                System.out.printf("%d\n",n1);
             }
             
         }
