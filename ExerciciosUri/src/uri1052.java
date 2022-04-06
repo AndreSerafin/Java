@@ -53,5 +53,7 @@ public class uri1052{
         }
 
         System.out.printf("%s\n",mes);
+
+        sc.close();
     }
 }
