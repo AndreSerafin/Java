@@ -7,28 +7,26 @@ soma de 12+14+16+18+20.*/
 public class uri1159{
     public static void main(String[] args) {
         
-        int x=1,soma=0;
+        int soma;
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
         
+        int x = sc.nextInt();
+
         while(x != 0){
-            soma = 0;
-            x = sc.nextInt();
+            
             
             int i=x;
-            while(x + 10 >= i){
-
-                if(x % 2 != 0){
-                    x+=1;
-                    
-                    System.out.println(x);
-                }
-    
-                soma += x;
-                i++;
+            if(x % 2 != 0){
+                
+                x++;
             }
+            
+            soma = x + x + 2 + x + 4 + x + 6 + x + 8;
             System.out.printf("%d\n",soma);
+            
+            x = sc.nextInt();
         }
 
 
