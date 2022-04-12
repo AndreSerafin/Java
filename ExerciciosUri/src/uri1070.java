@@ -1,6 +1,6 @@
 import java.util.Locale;
 import java.util.Scanner;
-
+/*Leia um valor inteiro X. Em seguida apresente os 6 valores ímpares consecutivos a partir de X, um valor por linha, inclusive o X ser for o caso.*/
 public class uri1070{
     public static void main(String[] args) {
         

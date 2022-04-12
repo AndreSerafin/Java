@@ -1,7 +1,6 @@
 import java.util.Locale;
 import java.util.Scanner;
-/*Faça um programa que leia 6 valores. Estes valores serão somente negativos ou positivos (desconsidere os valores nulos). 
-A seguir, mostre a quantidade de valores positivos digitados.*/
+/*Leia um valor inteiro X (1 <= X <= 1000). Em seguida mostre os ímpares de 1 até X, um valor por linha, inclusive o X, se for o caso.*/
 public class uri1067{
     public static void main(String[] args){
         

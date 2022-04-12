@@ -17,7 +17,6 @@ public class uri1159{
         while(x != 0){
             
             
-            int i=x;
             if(x % 2 != 0){
                 
                 x++;

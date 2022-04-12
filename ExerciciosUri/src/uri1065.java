@@ -1,7 +1,6 @@
 import java.util.Locale;
 import java.util.Scanner;
-/*Faça um programa que leia 6 valores. Estes valores serão somente negativos ou positivos (desconsidere os valores nulos). 
-A seguir, mostre a quantidade de valores positivos digitados.*/
+/*Faça um programa que leia 5 valores inteiros. Conte quantos destes valores digitados são pares e mostre esta informação.*/
 public class uri1065{
     public static void main(String[] args){
         
