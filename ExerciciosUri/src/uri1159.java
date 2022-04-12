@@ -20,9 +20,6 @@ public class uri1159{
                 x+=1;
             }
 
-
-            
-
             System.out.printf("%d\n",soma);
         }
 
