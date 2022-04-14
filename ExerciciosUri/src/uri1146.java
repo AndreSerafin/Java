@@ -7,10 +7,8 @@ public class uri1146 {
         
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        
-        int x;
 
-        x = sc.nextInt();
+        int x = sc.nextInt();
          while(x != 0){
 
             for(int i = 1;i < x;i++){

@@ -4,37 +4,22 @@ import java.util.Scanner;
 public class teste {
  
     public static void main(String[] args){
-        
-        int horaInic,horaFinal,minInic,minFinal,hora,min,total;
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        
-        horaInic = sc.nextInt();
-        minInic = sc.nextInt();
-        horaFinal = sc.nextInt();
-        minFinal = sc.nextInt(); 
-        
-        if(horaFinal <= horaInic){
-            total = (horaFinal - horaInic) * 60 + (minFinal - minInic);
 
-            hora = 24 + total/60;
-            total %= 60;
-            min = total;
-            
-        }else{
-            total = (horaFinal - horaInic) * 60 + (minFinal - minInic);
+        int N = sc.nextInt();
+        double[] vet = new double[N];
+        for(int i=0;i<N;i++){
+            vet[i] = sc.nextDouble();
+        }
+        for(int i=0;i<N;i++){
+            System.out.printf("%.2f\n",vet[i]);
 
-            hora = total/60;
-            total %= 60;
-            min = total;
-            System.out.printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)",hora,min);
         }
 
-        
-
-        
         sc.close();
+
     }
  
 }

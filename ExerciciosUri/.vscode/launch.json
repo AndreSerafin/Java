@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch teste",
+            "request": "launch",
+            "mainClass": "teste",
+            "projectName": "ExerciciosUri_d2a9f20a"
+        },
+        {
+            "type": "java",
             "name": "Launch uri1158",
             "request": "launch",
             "mainClass": "uri1158",
