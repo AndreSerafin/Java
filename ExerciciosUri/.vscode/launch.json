@@ -2,79 +2,9 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch uri1071",
+            "name": "Launch uri1158",
             "request": "launch",
-            "mainClass": "uri1071",
-            "projectName": "ExerciciosUri_d2a9f20a"
-        },
-        {
-            "type": "java",
-            "name": "Launch uri1159",
-            "request": "launch",
-            "mainClass": "uri1159",
-            "projectName": "ExerciciosUri_d2a9f20a"
-        },
-        {
-            "type": "java",
-            "name": "Launch uri1118",
-            "request": "launch",
-            "mainClass": "uri1118",
-            "projectName": "ExerciciosUri_112c988"
-        },
-        {
-            "type": "java",
-            "name": "Launch uri1114",
-            "request": "launch",
-            "mainClass": "uri1114",
-            "projectName": "ExerciciosUri_d2a9f20a"
-        },
-        {
-            "type": "java",
-            "name": "Launch uri1067",
-            "request": "launch",
-            "mainClass": "uri1067",
-            "projectName": "ExerciciosUri_d2a9f20a"
-        },
-        {
-            "type": "java",
-            "name": "Launch uri1051",
-            "request": "launch",
-            "mainClass": "uri1051",
-            "projectName": "ExerciciosUri_d2a9f20a"
-        },
-        {
-            "type": "java",
-            "name": "Launch uri1021",
-            "request": "launch",
-            "mainClass": "uri1021",
-            "projectName": "ExerciciosUri_112c988"
-        },
-        {
-            "type": "java",
-            "name": "Launch uri1020",
-            "request": "launch",
-            "mainClass": "uri1020",
-            "projectName": "ExerciciosUri_112c988"
-        },
-        {
-            "type": "java",
-            "name": "Launch uri1009",
-            "request": "launch",
-            "mainClass": "uri1009",
-            "projectName": "ExerciciosUri_d2a9f20a"
-        },
-        {
-            "type": "java",
-            "name": "Launch uri1005",
-            "request": "launch",
-            "mainClass": "uri1005",
-            "projectName": "ExerciciosUri_d2a9f20a"
-        },
-        {
-            "type": "java",
-            "name": "Launch uri1004",
-            "request": "launch",
-            "mainClass": "uri1004",
+            "mainClass": "uri1158",
             "projectName": "ExerciciosUri_112c988"
         },
         {
