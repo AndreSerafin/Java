@@ -31,7 +31,7 @@ public class ex011 {
         mediaAltura /= n;
         double porcentagem = (menosDe16*100) / n;
         System.out.printf("Altura Média = %.2f\n",mediaAltura);
-        System.out.printf("Porcentagem com menor de 16 = %.2f %%\n",porcentagem);
+        System.out.printf("Porcentagem menor de 16 = %.2f %%\n",porcentagem);
 
 
 

@@ -22,12 +22,13 @@ public class exVetores003 {
         int[] vetC = new int[n];
 
         for(int i = 0; i < n; i++){
-            vetC[i] = vetA[i] + vetC[i];
+            vetC[i] = vetA[i] + vetB[i];
         }
-        
+        System.out.printf("SOMA = ");
         for(int i = 0; i < n; i++){
-            System.out.printf("%d \n",vetC[i]);
+            System.out.printf("%d ",vetC[i]);
         }
+        System.out.println();
 
         
         sc.close();
