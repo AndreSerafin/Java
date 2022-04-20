@@ -24,13 +24,15 @@ public class exVetores004 {
         
         media /= n;
 
-        System.out.printf("media = %.3f\n",media);
+        System.out.printf("Media: %.3f\n",media);
 
+        System.out.printf("Abaixo da media: ");
         for(int i = 0; i < n; i++){
             if(vet[i] < media){
-                System.out.printf("%.1f\n",vet[i]);
+                System.out.printf("%.1f ",vet[i]);
             }
         }
+        System.out.println();
 
         sc.close();
     }

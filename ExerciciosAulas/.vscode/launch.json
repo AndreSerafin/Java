@@ -2,10 +2,31 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch ex009",
+            "name": "Launch exVetores003",
             "request": "launch",
-            "mainClass": "ex009",
-            "projectName": "ExerciciosAulas_66e2606"
+            "mainClass": "exVetores003",
+            "projectName": "ExerciciosUri_112c988"
+        },
+        {
+            "type": "java",
+            "name": "Launch exVetores002",
+            "request": "launch",
+            "mainClass": "exVetores002",
+            "projectName": "ExerciciosUri_d2a9f20a"
+        },
+        {
+            "type": "java",
+            "name": "Launch teste",
+            "request": "launch",
+            "mainClass": "teste",
+            "projectName": "ExerciciosUri_d2a9f20a"
+        },
+        {
+            "type": "java",
+            "name": "Launch uri1158",
+            "request": "launch",
+            "mainClass": "uri1158",
+            "projectName": "ExerciciosUri_112c988"
         },
         {
             "type": "java",

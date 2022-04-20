@@ -22,7 +22,7 @@ public class exVetores005 {
         }
         media /= (double) pares;
 
-        System.out.printf("Media = %.2f\n",media);
+        System.out.printf("Media: %.2f\n",media);
 
         sc.close();
     }
