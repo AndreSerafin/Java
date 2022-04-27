@@ -5,7 +5,7 @@ soldados. Por exemplo, a figura abaixo mostra a organização do pelotão em 3 f
 Um dos exercícios que o sargento Silva realiza com o pelotão é o exercício "girar fila", que consiste em dizer o número
 de uma fila, de modo que os soldados desta fila devem se mover para a direita, e o último soldado da direita vai para a
 posição mais à esquerda. Você deve fazer um programa para ler a formação do pelotão e executar o exercício "girar fila".*/
-public class exMatrizes007 {
+public class exMatrizes007OrdemInvertida {
     public static void main(String[] args){
 
         Locale.setDefault(Locale.US);
@@ -21,28 +21,23 @@ public class exMatrizes007 {
                 a[i][j] = sc.nextInt();
             }
         }
-        int[][] b = new int[n][m];
+        
         System.out.printf("Digite a linha que deseja girar(1 a %d)\n",n);
         int linha = sc.nextInt() - 1;
         
         for(int i = 0; i < n; i++){
-            for(int j = 0; j < m; j++){
-                if(i == linha){
-                    if(j == 0 ){
-                        b[i][j] = a[i][m-1];
-                                               
-                    }else{
-                        b[i][j] = a[i][j-1];
-                    }
-                    
-                }else{
-                    b[i][j] = a[i][j];
-                    
+            if(i == linha){
+                for(int u = m-1; u >= 0; u--){
+                    System.out.printf("%d ",a[i][u]);
                 }
-                System.out.printf("%d ",b[i][j]);
+            }else{
+                for(int j = 0; j < m; j++){
+                    System.out.printf("%d ", a[i][j]);
+                }
             }
             System.out.println();
         }
+        
         
         sc.close();
     }
