@@ -27,6 +27,7 @@ public class Program {
 
         System.out.println(funcionario.toString());
 
+        System.out.println();
         System.out.println("Em quantos porcento o salario será aumentado? ");
         double porcentagem = sc.nextDouble();
         funcionario.aumentoSalarial(porcentagem);
