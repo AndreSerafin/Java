@@ -22,6 +22,7 @@ public class Program {
         estudante.nota1 = sc.nextDouble();
         estudante.nota2 = sc.nextDouble();
         estudante.nota3 = sc.nextDouble();
+        
 
         System.out.println();
         System.out.println(estudante.toString());
