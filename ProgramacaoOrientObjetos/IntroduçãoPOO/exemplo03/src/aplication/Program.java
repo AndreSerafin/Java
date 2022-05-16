@@ -18,17 +18,20 @@ public class Program {
         System.out.print("Preco: ");
         double preco = sc.nextDouble();
 
-        System.out.print("Quantidade: ");
-        int quantidade = sc.nextInt();
 
-        Product produto = new Product(nome, preco, quantidade);
+        Product produto = new Product(nome, preco);
+
+        produto.setNome("Computador");
+        System.out.printf("Nome atualizado: %s\n",produto.getNome());
+        produto.setPreco(1200.00);
+        System.out.printf("Preco atualizado: %.2f\n", produto.getPreco());
 
         System.out.println();
         System.out.println("Dados do produto: " + produto);
 
         System.out.println();
         System.out.print("Digite a quantidade de produtos a serem adicionados no estoque: ");
-        quantidade = sc.nextInt();
+        int quantidade = sc.nextInt();
         produto.addProducts(quantidade);
 
         System.out.println();
