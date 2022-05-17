@@ -37,13 +37,13 @@ public class Program {
 
         System.out.printf("\nDados da conta - %s\n", conta.toString());
 
-        System.out.println("\n┌───────────────────────────────┐");
+        System.out.println("\n╭───────────────────────────────╮");
         System.out.println("│      Selecione uma opcao!     │");
         System.out.println("│        0 - Encerrar           │");
         System.out.println("│        1 - Deposito           │");
         System.out.println("│        2 - Saque              │");
         System.out.println("│  3 - Alterar nome do Titular  │");
-        System.out.println("└───────────────────────────────┘");
+        System.out.println("╰───────────────────────────────╯");
 
         int op2 = sc.nextInt();
 
@@ -72,13 +72,13 @@ public class Program {
                 default -> System.out.println("\nOpcao Invalida!");
             }
 
-            System.out.println("\n┌───────────────────────────────┐");
+            System.out.println("\n╭───────────────────────────────╮");
             System.out.println("│      Selecione uma opcao!     │");
             System.out.println("│        0 - Encerrar           │");
             System.out.println("│        1 - Deposito           │");
             System.out.println("│        2 - Saque              │");
             System.out.println("│  3 - Alterar nome do Titular  │");
-            System.out.println("└───────────────────────────────┘");
+            System.out.println("╰───────────────────────────────╯");
 
             op2 = sc.nextInt();
         }
