@@ -36,39 +36,41 @@ public class Program {
             conta = new Account(numeroDaConta, nomeTitular);
         }
 
-        System.out.printf("\nDados da conta: %s\n", conta.toString());
+        System.out.printf("\nDados da conta - %s\n", conta.toString());
 
-        System.out.println("\nSelecione a opcao: ");
-        System.out.println("0 - Encerrar");
-        System.out.println("1 - Deposito");
-        System.out.println("2 - Saque");
+        System.out.println("\n┌───────────────────────────────┐");
+        System.out.println("│      Selecione uma opcao!     │");
+        System.out.println("│        0 - Encerrar           │");
+        System.out.println("│        1 - Deposito           │");
+        System.out.println("│        2 - Saque              │");
+        System.out.println("└───────────────────────────────┘");
 
         int op2 = sc.nextInt();
 
         while(op2 != 0){
 
-            switch (op2){
-                case 1:
+            switch (op2) {
+                case 1 -> {
                     System.out.print("Digite o valor do deposito: ");
                     double deposito = sc.nextDouble();
                     conta.deposito(deposito);
-                    System.out.printf("Dados atualizados: %s\n", conta.toString());
-                    break;
-                case 2:
+                    System.out.printf("\nDados atualizados:\n%s\n", conta.toString());
+                }
+                case 2 -> {
                     System.out.print("Digite o valor do saque: ");
                     double saque = sc.nextDouble();
                     conta.saque(saque);
-                    System.out.printf("Dados atualizados: %s\n", conta.toString());
-                    break;
-                default:
-                    System.out.println("Opcao Invalida!");
-                    break;
+                    System.out.printf("\nDados atualizados:\n%s\n", conta.toString());
+                }
+                default -> System.out.println("\nOpcao Invalida!");
             }
 
-            System.out.println("\nSelecione a opcao: ");
-            System.out.println("0 - Encerrar");
-            System.out.println("1 - Deposito");
-            System.out.println("2 - Saque");
+            System.out.println("\n┌───────────────────────────────┐");
+            System.out.println("│      Selecione uma opcao!     │");
+            System.out.println("│        0 - Encerrar           │");
+            System.out.println("│        1 - Deposito           │");
+            System.out.println("│        2 - Saque              │");
+            System.out.println("└───────────────────────────────┘");
 
             op2 = sc.nextInt();
         }

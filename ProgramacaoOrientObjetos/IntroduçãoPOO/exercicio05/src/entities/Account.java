@@ -5,7 +5,7 @@ public class Account {
     private int numeroDaConta;
     private String nomeTitular;
     private double depositoInicial;
-
+    private final static int TAXA = 5;
     private double saldo;
 
     public Account(int numeroDaConta, String nomeTitular, double depositoInicial) {
@@ -54,11 +54,21 @@ public class Account {
     }
 
     public void saque(double saque) {
-        if(saldo > 0) {
-            saldo -= saque;
-        }else{
-            System.out.println("Saldo insuficiente");
-        }
+
+        saldo -= saque;
+        saldo -= TAXA;
+
+        /*if(saldo > 0) {
+        *
+        *   if(saque < saldo) {
+        *       saldo -= saque;
+        *        saldo -= TAXA;
+        *    }else{
+        *        System.out.println("\nQuantidade digitada maior do que o saldo disponível");
+        *    }
+        *}else{
+        *    System.out.println("\nSaldo insuficiente");
+        }*/
     }
 
     public String toString() {
@@ -68,7 +78,7 @@ public class Account {
                 + "Titular: "
                 + nomeTitular
                 + ", "
-                + "Saldo: "
-                + saldo;
+                + "Saldo: R$ "
+                + String.format("%.2f", getSaldo());
     }
 }
