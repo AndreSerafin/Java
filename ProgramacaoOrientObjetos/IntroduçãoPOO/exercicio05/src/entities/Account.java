@@ -4,15 +4,13 @@ public class Account {
 
     private int numeroDaConta;
     private String nomeTitular;
-    private double depositoInicial;
     private final static int TAXA = 5;
     private double saldo;
 
     public Account(int numeroDaConta, String nomeTitular, double depositoInicial) {
         this.numeroDaConta = numeroDaConta;
         this.nomeTitular = nomeTitular;
-        this.depositoInicial = depositoInicial;
-        saldo = depositoInicial;
+        deposito(depositoInicial);
     }
 
     public Account(int numeroDaConta, String nomeTitular) {
@@ -20,43 +18,26 @@ public class Account {
         this.nomeTitular = nomeTitular;
     }
 
-    public int getNumeroDaConta() {
-        return numeroDaConta;
-    }
+    public int getNumeroDaConta() { return numeroDaConta; }
 
-    public void setNumeroDaConta(int numeroDaConta) {
-        this.numeroDaConta = numeroDaConta;
-    }
-
-    public String getNomeTitular() {
-        return nomeTitular;
-    }
+    public String getNomeTitular() { return nomeTitular; }
 
     public void setNomeTitular(String nomeTitular) {
         this.nomeTitular = nomeTitular;
-    }
-
-    public double getDepositoInicial() {
-        return depositoInicial;
-    }
-
-    public void setDepositoInicial(double depositoInicial) {
-        this.depositoInicial = depositoInicial;
     }
 
     public double getSaldo() {
         return saldo;
     }
 
-    public void deposito(double deposito){
+    public void deposito(double quantia){
 
-        saldo += deposito;
+        saldo += quantia;
     }
 
-    public void saque(double saque) {
+    public void saque(double quantia) {
 
-        saldo -= saque;
-        saldo -= TAXA;
+        saldo -= quantia + TAXA;
 
         /*if(saldo > 0) {
         *
@@ -73,10 +54,10 @@ public class Account {
 
     public String toString() {
         return "Conta: "
-                + numeroDaConta
+                + getNumeroDaConta()
                 + ", "
                 + "Titular: "
-                + nomeTitular
+                + getNomeTitular()
                 + ", "
                 + "Saldo: R$ "
                 + String.format("%.2f", getSaldo());

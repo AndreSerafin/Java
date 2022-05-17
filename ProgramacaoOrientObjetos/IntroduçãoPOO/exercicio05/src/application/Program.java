@@ -20,7 +20,6 @@ public class Program {
         String nomeTitular = sc.nextLine();
 
         System.out.println("\nDeseja fazer um deposito inicial? (s/n)");
-        double depositoInicial;
         char op1 = sc.next().charAt(0);
 
         while(op1 != 's' && op1 != 'n'){
@@ -30,7 +29,7 @@ public class Program {
 
         if (op1 == 's'){
             System.out.print("\nDigite o valor do deposito inicial: ");
-            depositoInicial = sc.nextDouble();
+            double depositoInicial = sc.nextDouble();
             conta = new Account(numeroDaConta, nomeTitular, depositoInicial);
         } else{
             conta = new Account(numeroDaConta, nomeTitular);
@@ -43,6 +42,7 @@ public class Program {
         System.out.println("│        0 - Encerrar           │");
         System.out.println("│        1 - Deposito           │");
         System.out.println("│        2 - Saque              │");
+        System.out.println("│  3 - Alterar nome do Titular  │");
         System.out.println("└───────────────────────────────┘");
 
         int op2 = sc.nextInt();
@@ -62,6 +62,13 @@ public class Program {
                     conta.saque(saque);
                     System.out.printf("\nDados atualizados:\n%s\n", conta.toString());
                 }
+                case 3 -> {
+                    System.out.print("Digite o novo nome do Titular da conta: ");
+                    sc.nextLine();
+                    nomeTitular = sc.nextLine();
+                    conta.setNomeTitular(nomeTitular);
+                    System.out.printf("\nDados atualizados:\n%s\n", conta.toString());
+                }
                 default -> System.out.println("\nOpcao Invalida!");
             }
 
@@ -70,6 +77,7 @@ public class Program {
             System.out.println("│        0 - Encerrar           │");
             System.out.println("│        1 - Deposito           │");
             System.out.println("│        2 - Saque              │");
+            System.out.println("│  3 - Alterar nome do Titular  │");
             System.out.println("└───────────────────────────────┘");
 
             op2 = sc.nextInt();
