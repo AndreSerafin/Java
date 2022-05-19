@@ -5,6 +5,8 @@ da pessoa.*/
 
 package application;
 
+import entities.PersonalData;
+
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -15,10 +17,22 @@ public class Program {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
+        PersonalData pessoa = new PersonalData();
+
         System.out.print("Digite o seu nome: ");
-        String nome = sc.nextLine();
-        System.out.println("Digite sua data de nascimento (dd/mm/aaaa): ");
+        pessoa.setNome(sc.nextLine());
+
+        System.out.print("\nDigite sua data de nascimento (dd/mm/aaaa): ");
         String[] dataDeNascimeto = sc.nextLine().split("/");
+        pessoa.setDia(Integer.parseInt(dataDeNascimeto[0]));
+        pessoa.setMes(Integer.parseInt(dataDeNascimeto[1]));
+        pessoa.setAno(Integer.parseInt(dataDeNascimeto[2]));
+
+        System.out.print("\nDigite a sua altura em metros: ");
+        pessoa.setAltura(sc.nextDouble());
+
+        System.out.println("\n" + pessoa.toString());
+        System.out.println(pessoa.calculaIdade());
 
 
 

@@ -12,38 +12,36 @@ public class PersonalData {
     private double altura;
 
     public void setNome(String nome){ this.nome = nome; }
-
     public String getNome() { return nome; }
-
-    public int getDia() { return dia; }
-
     public void setDia(int dia) { this.dia = dia; }
-
-    public int getMes() { return mes; }
-
     public void setMes(int mes) { this.mes = mes; }
-
-    public int getAno() { return ano; }
-
     public void setAno(int ano) { this.ano = ano; }
 
     public void setAltura(double altura) { this.altura = altura; }
 
     public double getAltura() { return altura; }
 
-    public String calculaIdade(int dia, int mes, int ano) {
+    public String calculaIdade() {
 
         DateTimeFormatter data = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         String[] dataAtual = (data.format(LocalDateTime.now())).split("/");
 
+        int dias = (Integer.parseInt(dataAtual[0]) - dia);
+        int meses = (Integer.parseInt(dataAtual[1]) - mes);
+        int anos = (Integer.parseInt(dataAtual[2]) - ano);
 
+        dias += anos * 365 + meses * 30;
+        anos = dias/365;
+        dias %= 365;
+        meses = dias/30;
+        dias %= 30;
 
-        return "Idade - " + ano + " ano(s) " + mes + " mes(es) " + dia + " dia(s) ";
+        return "Idade - " + anos + " ano(s) " + meses + " mes(es) " + dias + " dia(s) ";
     }
 
     public String toString() {
 
-        return "Nome: " + getNome() + ", Altura: " + getAltura();
+        return "Nome: " + nome + ", Altura: " + altura;
     }
 
 
