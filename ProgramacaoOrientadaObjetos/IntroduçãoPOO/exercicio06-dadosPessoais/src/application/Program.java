@@ -34,8 +34,6 @@ public class Program {
         System.out.println("\n" + pessoa.toString());
         System.out.println(pessoa.calculaIdade());
 
-
-
         sc.close();
     }
 }
