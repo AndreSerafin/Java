@@ -12,6 +12,10 @@ public class Conta {
         this.saldo = saldo;
     }
 
+    public int getNumeroDaConta() {
+        return numeroDaConta;
+    }
+
     public void cadastroConta(String nome, int numeroDaConta, double saldo) {
 
 

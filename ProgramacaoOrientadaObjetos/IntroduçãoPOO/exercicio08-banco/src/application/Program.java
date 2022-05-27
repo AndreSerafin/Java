@@ -41,15 +41,21 @@ public class Program {
 
             case 1 -> {
 
-
+                int[] num = new int[MAX];
 
                 for (int i = 0; i < conta.length; i++) {
 
                     sc.nextLine();
                     System.out.print("Digite o nome do cliente:\n ► ");
                     String nome = sc.nextLine();
-                    System.out.print("Digite o numero da conta:\n ► ");
-                    int num = sc.nextInt();
+                    System.out.print("Digite o número da conta:\n ► ");
+                        
+                        if(i > 0 && num[i] == num[i - 1]){
+                            System.out.println("Número de conta Indisponível!");
+                        }else {
+
+                            num[i] = sc.nextInt();
+                        }
                     System.out.print("Digite o saldo inicial:\n ► ");
                     double saldo = sc.nextDouble();
 
