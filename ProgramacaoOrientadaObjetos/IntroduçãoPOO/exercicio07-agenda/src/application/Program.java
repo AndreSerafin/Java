@@ -21,6 +21,48 @@ public class Program {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
+        int op, cont = 0;
+
+        do{
+
+            System.out.println("\n╭────────────────────────────────────────╮");
+            System.out.println("│            Menu de opções:             │");
+            System.out.println("│        0. Finalizar programa:          │");
+            System.out.println("│         1. Armazenar pessoa:           │");
+            System.out.println("│  2. Vizualizar pessoas armazernadas:   │");
+            System.out.println("│         3. Excluir uma pessoa:         │");
+            System.out.println("╰────────────────────────────────────────╯");
+
+            op = sc.nextInt();
+
+            switch (op){
+                case 1 -> {
+                    Agenda.armazenaPessoa();
+                    cont++;
+                }case 2 -> {
+                    if(cont == 0){
+                        System.out.println("Nehuma pessoa armazenada ate o momento!");
+                    }else {
+                        Agenda.vizualizaPessoas();
+                    }
+                }case 3 -> {
+                    if(cont == 0){
+                        System.out.println("Nehuma pessoa armazenada ate o momento!");
+                    }else {
+                        Agenda.excluiPessoa();
+                    }
+                } case 0 -> {
+                }
+                default -> {
+                    System.out.printf("\nOpção Inválida!");
+                }
+            }
+
+
+
+        }while (op != 0);
+
+        Agenda.armazenaPessoa();
 
         sc.close();
     }
