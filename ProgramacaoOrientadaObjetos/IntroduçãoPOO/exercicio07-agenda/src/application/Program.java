@@ -21,7 +21,8 @@ public class Program {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        int op, cont = 0;
+        int op;
+        boolean key = false;
 
         do{
 
@@ -38,15 +39,15 @@ public class Program {
             switch (op){
                 case 1 -> {
                     Agenda.armazenaPessoa();
-                    cont++;
+                    key = true;
                 }case 2 -> {
-                    if(cont == 0){
+                    if(!key){
                         System.out.println("Nehuma pessoa armazenada ate o momento!");
                     }else {
                         Agenda.vizualizaPessoas();
                     }
                 }case 3 -> {
-                    if(cont == 0){
+                    if(!key){
                         System.out.println("Nehuma pessoa armazenada ate o momento!");
                     }else {
                         Agenda.excluiPessoa();
