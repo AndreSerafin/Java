@@ -13,4 +13,35 @@ public class Cliente {
         this.telefone = telefone;
         this.endereco = endereco;
     }
+
+    public int getCodCLi() {
+        return codCLi;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setCodCLi(int codCLi) {
+        this.codCLi = codCLi;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public String toString() {
+        return "Codigo do Cliente: " + codCLi
+                + ", Nome: " + nome
+                +", Telefone: " + telefone
+                +", Endereço: " + endereco;
+    }
 }

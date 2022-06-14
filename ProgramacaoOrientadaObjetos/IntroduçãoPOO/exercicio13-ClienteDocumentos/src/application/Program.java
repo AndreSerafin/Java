@@ -17,7 +17,6 @@ documentos.Casoocliente não exista,deverá mostraramensagem Cliente não encont
 f)Excluir documentos por período-oprograma deverá informaradata inicialeadata finaleexcluir todos os
 documentos que possuam data de vencimento nesse período.
 g)Alterar as informações sobre os clientes-só não pode ser alteradoocódigo do cliente.
-h)Mostrar o total de documentos de determinado cliente.
 i)Sair.*/
 
 import entities.Cliente;
@@ -57,14 +56,12 @@ public class Program {
             System.out.println("│                    7. Excluir documentos por cliente:                   │");
             System.out.println("│                    8. Excluir documentos por periodo:                   │");
             System.out.println("│                   9. Alterar informacoes de clientes:                   │");
-            System.out.println("│         10. Mostrar o total de documentos de determinado cliente:       │");
             System.out.println("╰─────────────────────────────────────────────────────────────────────────╯\n");
 
             op = sc.nextInt();
 
             switch (op){
                 case 0 -> {
-
                 }
                 case 1 -> {
 
@@ -73,7 +70,7 @@ public class Program {
 
                     for (int i = 0; i < quantCli; i++) {
 
-                        System.out.print("Codigo cliente: ");
+                        System.out.print("\nCodigo cliente: ");
                         int codCli = sc.nextInt();
                         while(codsEmUso.contains(codCli)){
                             System.out.print("Codigo inválido!\nDigite novamente: ");
@@ -103,7 +100,7 @@ public class Program {
 
                     for (int i = 0; i < quantDocs; i++) {
 
-                        System.out.print("Numero do Documento: ");
+                        System.out.print("\nNumero do Documento: ");
                         int numDoc = sc.nextInt();
                         while(numDocEmUso.contains(numDoc)){
                             System.out.print("Numero Inválido!\nDigite novamente: ");
@@ -116,14 +113,38 @@ public class Program {
 
                         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-                        System.out.print("Data de Vencimento: ");
-                        sc.nextLine();
-                        String x = sc.nextLine();
-                        Date dataVencimento = sdf.parse(x);
+                        System.out.print("Data de Vencimento(dd/mm/aaaa): ");
 
-                        System.out.print("Data de Pagamento: ");
-                        x = sc.nextLine();
-                        Date dataPagamento = sdf.parse(x);
+                        String x;
+                        Date dataVencimento = null;
+                        boolean eValido;
+
+                        sc.nextLine();
+                        do{
+
+                            try{
+                                x = sc.nextLine();
+                                dataVencimento = sdf.parse(x);
+                                eValido = true;
+                            }catch (Exception e){
+                                System.out.println("Data invalida!");
+                                eValido = false;
+                            }
+                        }while (!eValido);
+
+                        System.out.print("Data de Pagamento(dd/mm/aaaa): ");
+                        Date dataPagamento = null;
+                        do{
+
+                            try{
+                                x = sc.nextLine();
+                                dataPagamento= sdf.parse(x);
+                                eValido = true;
+                            }catch (Exception e){
+                                System.out.println("Data invalida!");
+                                eValido = false;
+                            }
+                        }while (!eValido);
 
                         System.out.print("Valor: ");
                         double valor = sc.nextDouble();
@@ -132,6 +153,124 @@ public class Program {
                         documentos.add(i, doc1);
 
                     }
+                }
+                case 3 -> {
+
+                    for (Cliente cli : cliente) {
+                        System.out.print("\n\n" + cli.toString());
+                    }
+                }
+                case 4 -> {
+
+                    for (Documentos doc : documentos) {
+                        System.out.println("\n" + doc.toString());
+                    }
+                }
+                case 5 -> {
+                    System.out.print("Nome do cliente: ");
+                    sc.nextLine();
+                    String nome = sc.nextLine();
+                    for (int i = cliente.size() - 1; i >= 0; i--){
+                        if(!documentos.isEmpty()){
+                            for (int j = 0; j < documentos.size(); j++){
+                                if(cliente.get(i).getNome().equals(nome)){
+                                    cliente.remove(i);
+                                }
+                            }
+                        }else if (cliente.get(i).getNome().equals(nome)) {
+                            cliente.remove(i);
+                        }
+                    }
+                }
+                case 6 -> {
+                    System.out.print("Digite o numero do documento: ");
+                    int numDoc = sc.nextInt();
+
+                    documentos.removeIf(doc -> doc.getNumDoc() == numDoc);
+                }
+                case 7 -> {
+                    System.out.print("Nome do cliente: ");
+                    sc.nextLine();
+                    String nomeCli = sc.nextLine();
+                    for (int i = documentos.size() - 1; i >= 0; i--){
+                        for (Cliente value : cliente) {
+                            if (value.getNome().equals(nomeCli)
+                                    && documentos.get(i).getCodCli() == value.getCodCLi()) {
+                                documentos.remove(i);
+                            }
+                        }
+                    }
+
+                }
+                case 8 -> {
+
+                    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                    System.out.print("Data inicial (dd/mm/aaaa): ");
+                    sc.nextLine();
+                    String x = sc.nextLine();
+                    Date dataInicial = sdf.parse(x);
+
+                    System.out.print("Data final (dd/mm/aaaa)");
+                    x = sc.nextLine();
+                    Date dataFinal = sdf.parse(x);
+
+                    for (int i = documentos.size() - 1; i >= 0; i--) {
+                        if(dataInicial.before(documentos.get(i).getDataDeVencimento())
+                                && dataFinal.after(documentos.get(i).getDataDeVencimento())){
+                            documentos.remove(documentos.get(i));
+                        }
+                    }
+
+                }
+                case 9 -> {
+
+                    if(!cliente.isEmpty()) {
+                        System.out.print("Codigo do cliente: ");
+                        int codCli = sc.nextInt();
+
+                        for (Cliente cli : cliente) {
+                            if (cli.getCodCLi() == codCli) {
+                                int op1;
+                                do {
+                                    System.out.println("\n╭──────────────────────╮");
+                                    System.out.println("│       Alterar:       │");
+                                    System.out.println("│      0. Voltar:      │");
+                                    System.out.println("│       1. Nome:       │");
+                                    System.out.println("│     2. Telefone:     │");
+                                    System.out.println("│     3. Endereco:     │");
+                                    System.out.println("╰──────────────────────╯");
+
+                                    op1 = sc.nextInt();
+
+                                    switch (op1) {
+                                        case 0 -> {
+
+                                        }
+                                        case 1 -> {
+                                            sc.nextLine();
+                                            cli.setNome(sc.nextLine());
+                                        }
+                                        case 2 -> {
+                                            sc.nextLine();
+                                            cli.setTelefone(sc.nextLine());
+                                        }
+                                        case 3 -> {
+                                            sc.nextLine();
+                                            cli.setEndereco(sc.nextLine());
+                                        }
+                                        default -> {
+                                            System.out.print("Opção Invalida!");
+                                        }
+                                    }
+                                } while (op1 != 0);
+                            }
+                        }
+                    }else{
+                        System.out.println("Nenhum cliente cadastrado!");
+                    }
+                }
+                default -> {
+                    System.out.print("Opção Invalida!");
                 }
             }
 
