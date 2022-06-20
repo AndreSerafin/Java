@@ -20,8 +20,12 @@ public class ContaPoupanca extends Conta {
     public void setTaxaJuros(Double taxaJuros) {
         this.taxaJuros = taxaJuros;
     }
-
     public void atualizaSaldo(){
         saldo += saldo * taxaJuros;
+    }
+
+    @Override
+    public void saque(Double quantia) {
+        saldo -= quantia;
     }
 }

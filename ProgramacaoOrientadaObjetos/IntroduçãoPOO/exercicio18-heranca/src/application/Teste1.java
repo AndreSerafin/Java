@@ -4,7 +4,7 @@ import entities.Conta;
 import entities.ContaComercial;
 import entities.ContaPoupanca;
 
-public class Program {
+public class Teste1 {
 
     public static void main(String[] args) {
 
