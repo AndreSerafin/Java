@@ -2,9 +2,9 @@ package entities;
 
 public class Funcionario {
 
-    protected String nome;
-    protected Integer horas;
-    protected Double valorPorHora;
+    private String nome;
+    private Integer horas;
+    private Double valorPorHora;
 
     Funcionario() {
 

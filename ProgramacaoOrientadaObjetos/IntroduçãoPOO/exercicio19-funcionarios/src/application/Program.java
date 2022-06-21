@@ -24,6 +24,9 @@ public class Program {
             System.out.printf("\nDados funcionario #%d\n", i + 1);
             char op;
 
+                System.out.print("Terceirizado(s/n)? ");
+                sc.nextLine();
+                op = sc.next().charAt(0);
                 System.out.print("Nome: ");
                 sc.nextLine();
                 String nome = sc.nextLine();
@@ -31,13 +34,10 @@ public class Program {
                 int horas = sc.nextInt();
                 System.out.print("Valor por hora: ");
                 double valHora = sc.nextDouble();
-                System.out.printf("Terceirizado(s/n)? ");
                 boolean key = false;
-                sc.nextLine();
 
             do{
 
-                op = sc.next().charAt(0);
 
                 switch (op) {
                     case 's' -> {
@@ -53,7 +53,10 @@ public class Program {
                         key = true;
                     }
                     default -> {
-                        System.out.print("Opção Inválida!\nSelecione novamente (s/n): ");
+                        System.out.print("Opção Inválida!\nSelecione novamente:\n ");
+                        System.out.print("Terceirizado(s/n)? ");
+                        sc.nextLine();
+                        op = sc.next().charAt(0);
                     }
                 }
 
