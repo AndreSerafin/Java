@@ -8,7 +8,7 @@ public class Teste1 {
 
     public static void main(String[] args) {
 
-        Conta c = new Conta(1001, "andre", 0.0);
+        //Conta c = new Conta(1001, "andre", 0.0);
         ContaComercial cc = new ContaComercial(1002, "maria", 0.0, 500.0);
 
         //Upcasting
