@@ -32,6 +32,7 @@ public class Cliente {
         this.pedido = pedido;
     }
 
+    @Override
     public String toString() {
         return "Nome do Cliente: " + nomeCliente + "\n"
                 + "Cpf: " + cpf + "\n"

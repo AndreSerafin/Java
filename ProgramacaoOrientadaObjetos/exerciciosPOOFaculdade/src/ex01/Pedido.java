@@ -35,7 +35,7 @@ public class Pedido {
         this.produtos.add(produto);
     }
 
-
+    @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         for(Produto x : produtos){
