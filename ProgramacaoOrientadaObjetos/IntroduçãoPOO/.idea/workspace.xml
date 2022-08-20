@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cc836be8-3463-46a3-be00-76ccce6008aa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/POOFaculdade/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/POOFaculdade/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/POOFaculdade/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/POOFaculdade/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/POOFaculdade/src/ex01/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/POOFaculdade/src/ex01/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/POOFaculdade/src/ex01/Pedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/POOFaculdade/src/ex01/Produto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/POOFaculdade/src/ex02/Agenda.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/POOFaculdade/src/ex02/Contato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/POOFaculdade/src/ex02/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/POOFaculdade/src/ex03/Emprestimo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/POOFaculdade/src/ex03/Livro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/POOFaculdade/src/ex03/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/POOFaculdade/src/ex03/Pessoa.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2Db52kf3tDmNOJFtyVoOoFVJJMu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/AndrePc/Documents/GitHub/Java/ProgramacaoOrientadaObjetos/POOFaculdade"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cc836be8-3463-46a3-be00-76ccce6008aa" name="Changes" comment="" />
+      <created>1660954740082</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1660954740082</updated>
+    </task>
+    <servers />
+  </component>
+</project>
