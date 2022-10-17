@@ -28,7 +28,7 @@ public class OrderItem {
 
     @Override
     public String toString() {
-        return product
-                + "Sub Total: " + String.format("%.2f",subTotal()) + "\n";
+        return product + ", Quantity: " + quantity
+                + ", Sub Total: $" + String.format("%.2f",subTotal()) + "\n";
     }
 }

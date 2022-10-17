@@ -35,6 +35,6 @@ public class Client {
     public String toString() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         return "Client: " + name
-                + "(" + sdf.format(birhtDate) + ") - " + email;
+                + " (" + sdf.format(birhtDate) + ") - " + email + "\n";
     }
 }
