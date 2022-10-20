@@ -1,3 +1,5 @@
+package entities;
+
 public class Employee {
 
     protected String name;
@@ -30,4 +32,8 @@ public class Employee {
         return hours * valuePerHour;
     }
 
+    @Override
+    public String toString() {
+        return name + "- $" + String.format("%.2f",payment());
+    }
 }

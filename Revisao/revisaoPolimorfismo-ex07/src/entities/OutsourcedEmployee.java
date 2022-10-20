@@ -1,3 +1,5 @@
+package entities;
+
 public class OutsourcedEmployee extends Employee {
 
     private Double addtionalCharge;
@@ -14,5 +16,11 @@ public class OutsourcedEmployee extends Employee {
     public Double getAddtionalCharge() {
         return addtionalCharge;
     }
+
+    @Override
+    public Double payment() {
+        return super.payment() + addtionalCharge * 1.1;
+    }
+
 
 }
