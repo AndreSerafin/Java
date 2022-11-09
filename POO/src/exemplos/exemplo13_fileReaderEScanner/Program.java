@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Program {
     public static void main(String[] args) {
 
-        String path = "in.txt";
+        String path = "res\\in.txt";
         FileReader fr = null;
         BufferedReader br = null;
 
