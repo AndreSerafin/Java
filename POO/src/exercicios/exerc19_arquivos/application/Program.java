@@ -10,7 +10,7 @@ public class Program {
 
     public static void main(String[] args) {
 
-        String inFilePath = "res\\in.csv";
+        String inFilePath = "/home/andre/Documentos/github/Java/POO/res/in.csv";
         List<Product> productList = new ArrayList<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader(inFilePath))){
@@ -26,10 +26,19 @@ public class Program {
             e.printStackTrace();
         }
 
-        String outFilePath = "src\\out\\out.csv";
+        String outFilePath = "/home/andre/Documentos/github/Java/POO/res";
+        boolean success = new File(outFilePath + "/out").mkdir();
 
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(outFilePath))) {
-            
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(outFilePath + "/out/out.csv"))) {
+            String[] vect = new String[2];
+            for(Product p : productList) {
+                vect[0] = p.getName();
+                vect[1] = p.totalValue().toString();
+                bw.write(vect[0] + "," + vect[1]);
+                bw.newLine();
+            }
+        }catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
