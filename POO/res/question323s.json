@@ -1,0 +1,68 @@
+{
+  "1": {
+    "question": "Normalmente, quantos litros de sangue uma pessoa tem?",
+    "answer": "Entre 4 a 6 litros",
+    "alternatives": [
+      "Entre 2 a 4 litros",
+      "Entre 4 a 6 litros",
+      "10 litros",
+      "7 litros"
+    ]
+  },
+  "2": {
+    "question": "De quem é a famosa frase “Penso, logo existo”?",
+    "answer": "Descartes",
+    "alternatives": ["Platão", "Galileu Galilei", "Descartes", "Sócrates"]
+  },
+  "3": {
+    "question": "Quais o menor e o maior país do mundo?",
+    "answer": "Vaticano e Rússia",
+    "alternatives": [
+      "Vaticano e Rússia",
+      "Nauru e China",
+      "Malta e Estados Unidos",
+      "São Marino e Índia"
+    ]
+  },
+  "4": {
+    "question": "Qual o nome do presidente do Brasil que ficou conhecido como Jango?",
+    "answer": "João Goulart",
+    "alternatives": [
+      "Jânio Quadros",
+      "Jacinto Anjos",
+      "Getúlio Vargas",
+      "João Goulart"
+    ]
+  },
+  "5": {
+    "question": "Qual o livro mais vendido no mundo a seguir à Bíblia?",
+    "answer": "Dom Quixote",
+    "alternatives": [
+      "O Senhor dos Anéis",
+      "Dom Quixote",
+      "Crônicas de Gelo e Fogo",
+      "Um Conto de Duas Cidades"
+    ]
+  },
+  "6": {
+    "question": "Quem pintou \"Guernica\"?",
+    "answer": "Pablo Picasso",
+    "alternatives": [
+      "Paul Cézanne",
+      "Pablo Picasso",
+      "Diego Rivera",
+      "Salvador Dali"
+    ]
+  },
+  "7": {
+    "question": "Qual o número mínimo de jogadores em cada time numa partida de futebol?",
+    "answer": "7",
+    "alternatives": [
+      "6",
+      "2",
+      "10",
+      "7"
+    ]
+  }
+
+}
